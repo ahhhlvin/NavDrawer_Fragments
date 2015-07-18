@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AC_07-18</string>
+
+
+    <string-array name ="nav_drawer_titles">
+        <item>Home</item>
+        <item>Counter</item>
+    </string-array>
+
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+</resources>
