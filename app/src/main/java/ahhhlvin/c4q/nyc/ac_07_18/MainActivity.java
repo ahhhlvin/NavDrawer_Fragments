@@ -64,7 +64,7 @@ public class MainActivity extends ActionBarActivity {
 
         // Create fragment manager to begin interacting with the fragments and the container
         FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.frameLayout, fragment).commit();
+        fragmentManager.beginTransaction().replace(R.id.frameLayout, fragment).addToBackStack(null).commit();
 
 
         // update selected item and title in nav drawer, then close the drawer
@@ -72,6 +72,10 @@ public class MainActivity extends ActionBarActivity {
         mDrawerLayout.closeDrawer(mDrawerList);
     }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
